@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geothermal Learning Portal | RE Clinic</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <nav>
+        <div class="logo">MIT RE Clinic</div>
+        <ul>
+            <li><a href="#basics">Basics</a></li>
+            <li><a href="#coalition">Coalition</a></li>
+            <li><a href="#physical">Physical</a></li>
+            <li><a href="#others">Case Studies</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Geothermal Energy: The Heat Beneath Your Feet</h1>
+        <p>A Community Guide to Clean Thermal Networks</p>
+    </header>
+
+    <main>
+        <section id="basics" class="module">
+            <div class="intro-card">
+                <h2>1. Geothermal Basics</h2>
+                <h3>Key Question: What is thermal energy?</h3>
+                <p>Thermal energy is energy associated with heat[cite: 54]. As you heat up a substance, its atoms move faster and its thermal energy increases[cite: 54, 55].</p>
+                <button class="ref-btn" onclick="openRef('vermont-leaflet')">Moving Heat Leaflet [cite: 59]</button>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="geo-card">
+                    <h4>Ground-Source Heat Pumps</h4>
+                    <p>Uses the earth as a heat source and sink; operates year-round due to stable underground temperatures[cite: 72, 73].</p>
+                    <button class="ref-btn" onclick="openRef('doe-flyer')">View DOE Flyer [cite: 80]</button>
+                </div>
+                <div class="geo-card">
+                    <h4>Air-Source Heat Pumps</h4>
+                    <p>Moves thermal energy between the inside and outside air; most common type[cite: 67, 70].</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="coalition" class="module">
+            <h2>2. Building a Coalition & Process</h2>
+            <p>Form a core group of organizers who will work together to advocate for geothermal in your community[cite: 228].</p>
+            <div class="roadmap-graphic">
+                <h3>The Decision Timeline</h3>
+                <p>Understand the steps a municipality goes through to bring geothermal networks into reality[cite: 276].</p>
+                <button onclick="openRef('decision-timeline')">View: Municipal Decision Timeline [cite: 276]</button>
+            </div>
+        </section>
+
+        <section id="physical" class="module">
+            <h2>3. Getting Physical: Places & The Public</h2>
+            <p>Geothermal networks have many "nodes" (buildings) that connect to a shared network[cite: 332].</p>
+            <div class="action-box">
+                <button onclick="openRef('site-selection')">Explore: Site Selection Considerations [cite: 338]</button>
+                <div id="impact-map">
+                    <p>[Charity Water Style Impact Map Mockup Goes Here]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="others" class="module">
+            <h2>4. Learning from Others</h2>
+            <p>Persuade municipal leaders by showing successful examples from other cities[cite: 460].</p>
+            <div class="case-study-grid">
+                <div class="case-card">Barnard College (NY) [cite: 466]</div>
+                <div class="case-card">Holyoke High School (MA) [cite: 358]</div>
+                <div class="case-card">Ithaca Southside (NY) [cite: 466]</div>
+            </div>
+            <button class="ref-btn" onclick="openRef('geo-database')">Open Neighborhoods Database [cite: 475]</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>MIT Renewable Energy Clinic - IAP 2026</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
