@@ -1,0 +1,40 @@
+:root {
+    --mit-red: #A31F34;
+    --mit-gray: #8B959E; /* Silver Gray */
+    --geo-green: #004d1a; /* Dark Green */
+    --bg-light: #f2f4f8;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Progress Bar at the Top */
+#progress-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    z-index: 1000;
+}
+
+#progress-bar {
+    height: 100%;
+    background: var(--geo-green);
+    width: 0%; /* Will be updated by JS */
+}
+
+.module {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+    background: var(--white);
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
