@@ -3,77 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geothermal Learning Portal | RE Clinic</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>MIT RE Clinic | Geothermal Community Portal</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="progress-container">
-        <div id="progress-bar"></div>
+
+<nav class="sunpower-nav">
+    <div class="nav-container">
+        <div class="logo"><a href="index.html">MIT RE <span>CLINIC</span></a></div>
+        <ul class="nav-links">
+            <li><a href="basics.html">Basics</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="physical.html">Physical</a></li>
+            <li><a href="#faq" class="nav-cta">FAQ</a></li>
+        </ul>
     </div>
+</nav>
 
-    <nav class="sunpower-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">MIT <span>RE Clinic</span></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="basics.html">Basics</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="physics.html">Physical</a></li>
-                <li><a href="index.html#faq" class="nav-cta">FAQ</a></li>
-            </ul>
+<header class="hero">
+    <h1>Geothermal Energy: The Heat Beneath Your Feet</h1>
+    <p>To maintain a comfortable and healthy indoor environment, every home—every building—needs to provide heating and cooling. We use thermal energy to recycle the heat we already have.</p>
+    <div class="hero-btns">
+        <a href="basics.html" class="btn-primary">Start Learning</a>
+        <a href="#resources" class="btn-secondary">Technical Data</a>
+    </div>
+</header>
+
+<section class="network-logic">
+    <div class="container">
+        <div class="section-intro">
+            <span class="phase-tag">How it works</span>
+            <h2>Recycling Heat Through Networks</h2>
+            <p>Instead of only transforming an individual home, we can implement systems that share resources across multiple buildings.</p>
         </div>
-    </nav>
-    
-    <header class="hero">
-        <h1>Geothermal Energy: The Heat Beneath Your Feet</h1>
-        <p>A Community Guide to Clean Thermal Networks</p>
-    </header>
-
-    <main>
-
-        <section class="questions-grid">
-            <a href="basics.html" class="question-card">
-                <h2>What is thermal energy?</h2>
-                <p>Learn the basics of heat and how it moves.</p>
-                <span class="explore-link">Explore the Science →</span>
-            </a>
-
-            <a href="process.html" class="question-card">
-                <h2>How do we build a coalition?</h2>
-                <p>Steps to organize your community and influence leaders.</p>
-                <span class="explore-link">See the Roadmap →</span>
-            </a>
-
-            <a href="physics.html" class="question-card">
-                <h2>Where can we put it?</h2>
-                <p>Identifying nodes and site selection for networks.</p>
-                <span class="explore-link">Check Site Selection →</span>
-            </a>
-        </section>
-
-        <section id="faq" class="faq-container">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <button class="faq-question">What is a heat pump? <span>+</span></button>
-                <div class="faq-answer">
-                    <p>A heat pump is a device that moves thermal energy from one place to another. It provides both heating and cooling.</p>
-                </div>
+        
+        <div class="logic-grid">
+            <div class="logic-card">
+                <h3>Capture</h3>
+                <p>Heat is energy. We can capture it, move it, and repurpose it. Waste heat is purposefully vented from large buildings such as grocery stores, ice arenas, and data centers.</p>
             </div>
-
-            <div class="faq-item">
-                <button class="faq-question">Why use Ground-Source over Air-Source? <span>+</span></button>
-                <div class="faq-answer">
-                    <p>Ground-source heat pumps use stable underground temperatures, making them more efficient year-round.</p>
-                </div>
+            <div class="logic-card">
+                <h3>Move</h3>
+                <p>Thermal energy can be carried to buildings by water in a network of underground, horizontal pipes. These pipes form closed loops that move heat where it is needed.</p>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>MIT Renewable Energy Clinic - IAP 2026</p>
-    </footer>
+            <div class="logic-card">
+                <h3>Amplify</h3>
+                <p>Inside each building, a water source heat pump amplifies that moderate temperature water—about 50°F—to higher temperatures for space heating and hot water.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="scripts/main.js"></script>
+
+
+<section id="faq" class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <button class="faq-question">What is an HVAC system? <span>+</span></button>
+        <div class="faq-answer">
+            <p>Every building has an HVAC system—heating, ventilation, and air conditioning—to maintain appropriate indoor temperature and humidity.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">What is a heat pump? <span>+</span></button>
+        <div class="faq-answer">
+            <p>A device that can provide both heating and cooling by moving thermal energy from inside to outside or vice-versa.</p>
+        </div>
+    </div>
+</section>
+
+<section id="resources" class="resource-highlights">
+    <div class="resource-text">
+        <h2>Technical Resources</h2>
+    </div>
+    <div class="resource-links">
+        <a href="https://drive.google.com/file/d/168m7G4-G4WEo7lNQ1rjG8zTVtm8nYfXu/view" target="_blank" class="res-card">
+            <span>Leaflet</span>
+            <h4>Moving Heat</h4>
+        </a>
+        <a href="https://drive.google.com/file/d/1_79OOgG7aGgZbS4roTv8j2y-AR95LXnk/view" target="_blank" class="res-card">
+            <span>DOE Flyer</span>
+            <h4>Ground-Source Basics</h4>
+        </a>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
+</script>
+
 </body>
 </html>

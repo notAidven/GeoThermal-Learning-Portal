@@ -8,3 +8,4 @@ document.querySelectorAll('.faq-question').forEach(button => {
         icon.innerText = item.classList.contains('active') ? '−' : '+';
     });
 });
+
