@@ -3,59 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geothermal Learning Portal | RE Clinic</title>
+    <title>The Basics | Geothermal Community Portal</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="progress-container">
-        <div id="progress-bar"></div>
+
+<nav class="sunpower-nav">
+    <div class="nav-container">
+        <div class="logo"><a href="index.html">MIT RE <span>CLINIC</span></a></div>
+        <ul class="nav-links">
+            <li><a href="basics.html">Basics</a></li>
+            <li><a href="systems.html">Systems</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="physical.html">Physical</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="row-wrapper">
+        <div class="page-container">
+            <section class="sunpower-row">
+                <div class="row-image" style="background-image: url('https://scied.ucar.edu/sites/default/files/styles/extra_large/public/media/images/heat_transfer_large_0.png.webp?itok=yahdKnnw');"></div>
+                <div class="row-text">
+                    <span class="phase-tag">Fundamental Science</span>
+                    <h2>What is Thermal Energy?</h2>
+                    <p>Thermal energy is energy associated with heat. When you heat up a substance, 
+                        its atoms move faster and its thermal energy increases. Heat naturally flows from warmer substances to cooler substances through a temperature gradient.</p>
+                </div>
+            </section>
+        </div>
     </div>
 
-    <nav class="sunpower-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">MIT <span>Renewable Energy Clinic</span></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="basics.html">Basics</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="physics.html">Physical</a></li>
-                <li><a href="index.html#faq" class="nav-cta">FAQ</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header class="hero">
-        <h1>Geothermal Energy: The Heat Beneath Your Feet</h1>
-        <p>A Community Guide to Clean Thermal Networks</p>
-    </header>
-
-    <main class="sub-page">
-        <section class="content-header">
-            <a href="index.html">← Back to Portal</a>
-            <h1>Geothermal Basics</h1>
-            <p>Understanding the science of heat and movement.</p>
-        </section>
-
-        <section class="detailed-content">
-            <article class="info-block">
-                <h2>What is thermal energy?</h2>
-                <p>Thermal energy is energy associated with heat. As you heat up a substance, its atoms move faster and its thermal energy increases.</p>
-            </article>
-
-            <article class="info-block">
-                <h2>How do we move it?</h2>
-                <p>A heat pump is a device that moves thermal energy from one place to another. It provides both heating and cooling.</p>
-                <div class="comparison">
-                    <p><strong>Air-Source:</strong> Moves energy between inside and outside air.</p>
-                    <p><strong>Ground-Source:</strong> Uses stable underground temperatures year-round.</p>
+    <div class="row-wrapper">
+        <div class="page-container">
+            <section class="sunpower-row">
+                <div class="row-image" style="background-color: var(--geo-green); color: white;">
+                    <div style="text-align: center;">
+                        <h3 style="font-size: 5rem; color: white; margin: 0; font-weight: 800;">50°F</h3>
+                        <p style="color: white; opacity: 0.9;">Stable Ground Temperature</p>
+                    </div>
                 </div>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>MIT Renewable Energy Clinic - IAP 2026</p>
-    </footer>
+                <div class="row-text">
+                    <span class="phase-tag">The Source</span>
+                    <h2>Heat Below the Surface</h2>
+                    <p>Geothermal energy is derived from the Earth's interior—heat below the surface. Every building needs to 
+                        provide heating and cooling to maintain a healthy indoor environment. Ground-source systems use these stable temperatures year round.</p>
+                </div>
+            </section>
+        </div>
+    </div>
 
-    <script src="scripts/main.js"></script>
+    
+
+    <div class="row-wrapper">
+        <div class="page-container">
+            <section class="sunpower-row">
+                <div class="row-image" style="background-image: url('https://www.energy.gov/sites/default/files/styles/full_article_width/public/2024-06/heatpump-labels-linkedin_0.png?itok=w0g4VmKI'); background-size: contain;">
+                    </div>
+                <div class="row-text">
+                    <span class="phase-tag">The Technology</span>
+                    <h2>Heat Pump Amplification</h2>
+                    <p>A heat pump moves thermal energy from one place to another to provide both heating and cooling. In the summer, it moves heat from inside to outside; in the winter, it pulls thermal energy from the outside in.</p>
+                    
+                    <div style="margin-top: 40px;">
+                        <a href="https://drive.google.com/file/d/1_79OOgG7aGgZbS4roTv8j2y-AR95LXnk/view" target="_blank" class="btn-primary" style="padding: 22px 45px; border-radius: 50px; text-transform: uppercase;">
+                            Learn More About Heat Pumps
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
 </body>
 </html>

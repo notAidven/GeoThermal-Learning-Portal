@@ -7,42 +7,233 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var(--white); color: #222; }
+body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var(--white); color: #222; overflow-x: hidden; }
 
 /* Navigation */
-.sunpower-nav { background: var(--white); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0 20px; }
 .logo a { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--black); }
 .logo span { color: var(--mit-red); }
-.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
 .nav-links a { text-decoration: none; color: #444; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 .nav-cta { background: var(--black); color: var(--white) !important; padding: 10px 20px; border-radius: 4px; }
 
-/* Hero */
-.hero { padding: 120px 10%; background: linear-gradient(135deg, var(--geo-green) 0%, var(--black) 100%); color: var(--white); text-align: center; }
-.hero h1 { font-size: 3.5rem; margin-bottom: 20px; letter-spacing: -2px; }
-.hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; }
-.hero-btns { display: flex; justify-content: center; gap: 20px; }
-.btn-primary { background: var(--mit-red); color: var(--white); padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 4px; }
-.btn-secondary { border: 2px solid var(--white); color: var(--white); padding: 13px 28px; text-decoration: none; font-weight: bold; border-radius: 4px; }
+.faq-question {
+    border-top: 1px solid #ddd;
+    padding: 30px 0;
+    font-size: 1.4rem;
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    cursor: pointer;
+}
 
-/* Logic Grid */
-.network-logic { padding: 80px 10%; text-align: center; }
-.logic-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 40px; }
-.logic-card { flex: 1; min-width: 280px; padding: 40px; background: #f9f9f9; border-top: 5px solid var(--black); text-align: left; }
+.faq-item:last-child {
+    border-bottom: 1px solid #ddd;
+}
 
-/* FAQ */
-.faq-container { padding: 80px 15%; background: #f8f9fa; }
-.faq-item { border-bottom: 1px solid #ddd; margin-bottom: 10px; }
-.faq-question { width: 100%; background: none; border: none; text-align: left; padding: 25px 0; font-size: 1.2rem; font-weight: bold; display: flex; justify-content: space-between; cursor: pointer; }
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-.faq-item.active .faq-answer { max-height: 500px; padding-bottom: 20px; }
+/* Navigation: Centered and Clean */
+/* Navigation: Full Spacing Fix */
+.sunpower-nav { 
+    background: var(--white); 
+    border-bottom: 1px solid #eee; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+    width: 100%; /* Ensures nav spans the whole screen */
+}
 
-/* Resource Hub */
-.resource-highlights { padding: 80px 10%; background: var(--bg-light); }
-.resource-links { display: flex; gap: 20px; margin-top: 30px; }
-.res-card { flex: 1; background: var(--white); padding: 25px; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #ddd; transition: 0.3s; }
-.res-card:hover { border-color: var(--mit-red); transform: translateY(-5px); }
-.res-card span { color: var(--mit-red); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; }
+.nav-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; /* This pushes links to the right */
+    align-items: center; 
+    height: 90px; 
+    padding: 0 40px; 
+}
 
-.phase-tag { display: inline-block; background: var(--geo-green); color: var(--white); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; margin-bottom: 15px; }
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 40px; /* Adds breathing room between links */
+    align-items: center; 
+}
+
+/* Hero: Full Width Background, Centered Content */
+.hero { 
+    padding: 160px 0; 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(135deg, var(--geo-green) 0%, var(--black) 100%);
+    width: 100%;
+}
+
+.hero h1 { 
+    font-size: 4.5rem; 
+    line-height: 1.05; 
+    letter-spacing: -3px; 
+    font-weight: 800;
+}
+
+/* Button Refinement */
+.btn-primary { 
+    background: var(--mit-red); 
+    color: var(--white); 
+    text-decoration: none; 
+    font-weight: 800; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(163, 31, 52, 0.4);
+}
+
+
+/* Desktop-Locked Layout (No Mobile Stacking) */
+.row-wrapper { width: 100%; }
+.row-wrapper:nth-child(even) { background-color: #f8f9fa; }
+
+.page-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.sunpower-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 100px 0;
+    gap: 80px; /* Generous SunPower spacing */
+}
+
+.row-image, .row-text {
+    flex: 1;
+    width: 50%;
+    min-height: 480px;
+}
+
+.row-image {
+    border-radius: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-image.photo { background-size: cover; }
+
+.row-text h2 {
+    font-size: 3.5rem;
+    line-height: 1.05;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+.row-text p { font-size: 1.25rem; color: #333; margin-bottom: 20px; }
+
+.row-wrapper:nth-child(even) .sunpower-row { flex-direction: row-reverse; }
+
+.phase-tag { 
+    display: inline-block; 
+    background: var(--geo-green); 
+    color: var(--white); 
+    padding: 6px 16px; 
+    border-radius: 20px; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    text-transform: uppercase;
+}
+
+.btn-primary { 
+    background: var(--mit-red); 
+    color: var(--white); 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #821829; /* Slightly darker MIT red on hover */
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(163, 31, 52, 0.3);
+}
+
+.row-text h2 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    letter-spacing: -1px; /* Slightly less tight for better legibility */
+}
+
+.row-text p {
+    font-size: 1.2rem;
+    line-height: 1.8; /* Increased from 1.6 for more breathing room */
+    color: #444;
+    margin-bottom: 25px; /* Adds space between paragraphs */
+}
+
+.row-text ul li {
+    margin-bottom: 18px; /* Spaces out bullet points */
+    line-height: 1.6;
+}
+
+/* This creates the 3-column row */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards in a row are same height */
+}
+
+.card-image {
+    width: 100%;
+    height: 200px; /* Slightly shorter for the 3-column look */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.card-link {
+    margin-top: auto; /* Pushes link to the bottom of the card */
+    font-weight: 700;
+    color: var(--mit-red);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
