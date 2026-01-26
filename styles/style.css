@@ -46,21 +46,65 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     width: 100%; /* Ensures nav spans the whole screen */
 }
 
-.nav-container { 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    display: flex; 
-    justify-content: space-between; /* This pushes links to the right */
-    align-items: center; 
-    height: 90px; 
-    padding: 0 40px; 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 40px;
+    flex-wrap: nowrap;
 }
 
-.nav-links { 
-    display: flex; 
-    list-style: none; 
-    gap: 40px; /* Adds breathing room between links */
-    align-items: center; 
+.logo {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.logo a {
+    font-size: 1.5rem; 
+    font-weight: 800;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo a span {
+    color: var(--mit-red); /* Optional: Colors "CLINIC" red if you have the variable set */
+}
+
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 30px; /* The gap that prevents clumping */
+    list-style: none;
+    margin-left: 50px;
+}
+
+.nav-links li {
+    white-space: nowrap; /* Forces text to stay on one line */
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--geo-green);
+}
+
+/* Adjusted Logo size to match */
+.logo a {
+    font-size: 1.5rem; 
+    font-weight: 800;
+    text-decoration: none;
 }
 
 /* Hero: Full Width Background, Centered Content */
@@ -236,4 +280,139 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     color: var(--mit-red);
     text-decoration: none;
     font-size: 0.9rem;
+}
+
+/* --- Process Page Specific Cards --- */
+
+/* Container for the column */
+/* --- Process Page Specific Card Styles --- */
+
+/* The Card itself (Floating inside the image area) */
+/* --- Process Page Specific Card Styles (UPDATED SIZE) --- */
+
+/* The Card itself */
+.process-file-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 550px; /* INCREASED from 360px to 550px */
+    height: 450px;    /* INCREASED from 300px to 450px */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    overflow: hidden;
+    margin: 0 auto; /* Keeps it centered in its half of the screen */
+}
+
+.process-file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Stronger shadow for big card */
+}
+
+/* Card Image Area */
+.process-card-thumb {
+    flex: 1.5; /* Takes up 60% of the card height */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Text Area */
+.process-card-info {
+    flex: 1; /* Takes up 40% of the card height */
+    padding: 25px 30px; /* More padding for a spacious look */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.process-card-label {
+    font-size: 0.8rem; /* Slightly bigger */
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.process-card-name {
+    font-size: 1.4rem; /* Bigger title */
+    font-weight: 800;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.process-card-link {
+    font-size: 0.9rem;
+    color: var(--geo-green);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Progress indicator for the curriculum flow */
+.curriculum-flow {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    background: white;
+}
+
+.flow-step {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+.flow-step.active {
+    color: var(--geo-green);
+    border-bottom: 2px solid var(--geo-green);
+}
+
+/* Updated smaller button class */
+.btn-small {
+    padding: 12px 28px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* 1. Ensure the row is a flex container */
+.sunpower-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px; /* Space between text and card */
+    padding: 40px 0;
+}
+
+/* 2. THE FLIP COMMAND: This reverses the order (Text Left / Card Right) */
+.sunpower-row.flip-layout {
+    flex-direction: row-reverse; 
+}
+
+/* --- MANUAL LAYOUT OVERRIDES --- */
+/* Paste this at the bottom of style.css */
+
+/* Forces the row to flip (Text Left / Card Right) */
+.sunpower-row.flip-layout {
+    flex-direction: row-reverse !important;
+}
+
+/* Forces the row to stay standard (Card Left / Text Right) */
+/* We need this to stop the "even" rows from flipping automatically if we don't want them to */
+.sunpower-row.standard-layout {
+    flex-direction: row !important;
 }
