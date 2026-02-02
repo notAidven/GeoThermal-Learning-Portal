@@ -9,41 +9,14 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var(--white); color: #222; overflow-x: hidden; }
 
-/* Navigation */
-.logo a { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--black); }
-.logo span { color: var(--mit-red); }
-.nav-links a { text-decoration: none; color: #444; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-.nav-cta { background: var(--black); color: var(--white) !important; padding: 10px 20px; border-radius: 4px; }
-
-.faq-question {
-    border-top: 1px solid #ddd;
-    padding: 30px 0;
-    font-size: 1.4rem;
-    color: var(--black);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    cursor: pointer;
-}
-
-.faq-item:last-child {
-    border-bottom: 1px solid #ddd;
-}
-
-/* Navigation: Centered and Clean */
-/* Navigation: Full Spacing Fix */
+/* --- NAVIGATION --- */
 .sunpower-nav { 
     background: var(--white); 
     border-bottom: 1px solid #eee; 
     position: sticky; 
     top: 0; 
     z-index: 1000;
-    width: 100%; /* Ensures nav spans the whole screen */
+    width: 100%; 
 }
 
 .nav-container {
@@ -57,98 +30,95 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     flex-wrap: nowrap;
 }
 
-.logo {
-    flex-shrink: 0;
-    white-space: nowrap;
-}
+.logo { flex-shrink: 0; white-space: nowrap; }
+.logo a { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: #333; }
+.logo span { color: var(--mit-red); }
 
-.logo a {
-    font-size: 1.5rem; 
-    font-weight: 800;
-    text-decoration: none;
-    color: #333;
-}
-
-.logo a span {
-    color: var(--mit-red); /* Optional: Colors "CLINIC" red if you have the variable set */
-}
+/* --- UPDATE THESE RULES IN STYLE.CSS --- */
 
 .nav-links {
     display: flex;
     flex: 1;
     justify-content: flex-end;
-    gap: 30px; /* The gap that prevents clumping */
+    gap: 20px; /* Reduced from 30px to fit more items */
     list-style: none;
-    margin-left: 50px;
-}
-
-.nav-links li {
-    white-space: nowrap; /* Forces text to stay on one line */
+    margin-left: 20px; /* Reduced margin */
 }
 
 .nav-links a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.85rem; /* Slightly smaller for better fit */
     font-weight: 700;
     color: #333;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Prevents text from wrapping */
 }
+.nav-links a:hover { color: var(--geo-green); }
 
-.nav-links a:hover {
-    color: var(--geo-green);
-}
-
-/* Adjusted Logo size to match */
-.logo a {
-    font-size: 1.5rem; 
-    font-weight: 800;
-    text-decoration: none;
-}
-
-/* Hero: Full Width Background, Centered Content */
+/* --- HERO SECTION --- */
 .hero { 
     padding: 160px 0; 
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(135deg, var(--geo-green) 0%, var(--black) 100%);
     width: 100%;
 }
-
 .hero h1 { 
     font-size: 4.5rem; 
     line-height: 1.05; 
     letter-spacing: -3px; 
-    font-weight: 800;
+    font-weight: 800; 
+    color: white;
 }
 
-/* Button Refinement */
+/* --- BUTTONS --- */
 .btn-primary { 
     background: var(--mit-red); 
     color: var(--white); 
+    padding: 15px 30px; 
     text-decoration: none; 
-    font-weight: 800; 
-    transition: all 0.3s ease;
+    font-weight: bold; 
+    border-radius: 4px; 
+    display: inline-block;
+    transition: all 0.2s ease;
     box-shadow: 0 4px 15px rgba(163, 31, 52, 0.4);
 }
+.btn-primary:hover {
+    background-color: #821829; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(163, 31, 52, 0.3);
+}
+.btn-small {
+    padding: 12px 28px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
 
-
-/* Desktop-Locked Layout (No Mobile Stacking) */
-.row-wrapper { width: 100%; }
-.row-wrapper:nth-child(even) { background-color: #f8f9fa; }
-
+/* --- GENERAL PAGE LAYOUT --- */
 .page-container {
     max-width: 1150px;
     margin: 0 auto;
     padding: 0 40px;
 }
 
+.row-wrapper { width: 100%; }
+.row-wrapper:nth-child(even) { background-color: #f8f9fa; }
+
 .sunpower-row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     padding: 100px 0;
-    gap: 80px; /* Generous SunPower spacing */
+    gap: 80px;
 }
+
+/* Manual Layout Overrides */
+.sunpower-row.flip-layout { flex-direction: row-reverse !important; }
+.sunpower-row.standard-layout { flex-direction: row !important; }
 
 .row-image, .row-text {
     flex: 1;
@@ -165,20 +135,22 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     align-items: center;
     justify-content: center;
 }
-
 .row-image.photo { background-size: cover; }
 
 .row-text h2 {
-    font-size: 3.5rem;
-    line-height: 1.05;
-    margin-bottom: 25px;
-    letter-spacing: -2px;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
     font-weight: 800;
 }
-
-.row-text p { font-size: 1.25rem; color: #333; margin-bottom: 20px; }
-
-.row-wrapper:nth-child(even) .sunpower-row { flex-direction: row-reverse; }
+.row-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 25px;
+}
+.row-text ul li { margin-bottom: 18px; line-height: 1.6; }
 
 .phase-tag { 
     display: inline-block; 
@@ -192,48 +164,28 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     text-transform: uppercase;
 }
 
-.btn-primary { 
-    background: var(--mit-red); 
-    color: var(--white); 
-    padding: 15px 30px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    border-radius: 4px; 
-    display: inline-block;
-}
-
-.btn-primary:hover {
-    background-color: #821829; /* Slightly darker MIT red on hover */
-    transform: translateY(-2px);
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(163, 31, 52, 0.3);
-}
-
-.row-text h2 {
-    font-size: 3.2rem;
-    line-height: 1.1;
-    margin-bottom: 30px;
-    letter-spacing: -1px; /* Slightly less tight for better legibility */
-}
-
-.row-text p {
-    font-size: 1.2rem;
-    line-height: 1.8; /* Increased from 1.6 for more breathing room */
-    color: #444;
-    margin-bottom: 25px; /* Adds space between paragraphs */
-}
-
-.row-text ul li {
-    margin-bottom: 18px; /* Spaces out bullet points */
-    line-height: 1.6;
-}
-
-/* This creates the 3-column row */
+/* --- RESOURCE GRID SYSTEM (FIXED) --- */
 .resource-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 25px;
+    display: grid !important;
+    /* Forces 3 Columns */
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 30px; 
     padding: 40px 0;
+    width: 100%;
+}
+
+/* Tablet: Switch to 2 Columns */
+@media (max-width: 1000px) {
+    .resource-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Mobile: Switch to 1 Column */
+@media (max-width: 650px) {
+    .resource-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 .resource-card {
@@ -243,15 +195,19 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensures all cards in a row are same height */
+    height: 100%;
+    border: 1px solid #eee;
 }
 
+/* Google Docs Preview Style */
 .card-image {
     width: 100%;
-    height: 200px; /* Slightly shorter for the 3-column look */
-    background-size: cover;
-    background-position: center;
+    height: 220px; 
+    background-color: #f0f0f0;  /* Light gray background */
+    background-size: contain;   /* Ensures the whole page is visible */
     background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 1px solid #ddd;
 }
 
 .card-content {
@@ -261,42 +217,32 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     flex-grow: 1;
 }
 
-.card-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    line-height: 1.2;
-}
+.card-content h3 { font-size: 1.3rem; margin-bottom: 8px; line-height: 1.2; font-weight: 800; }
+.card-content p { font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; color: #555; }
+.card-link { margin-top: auto; font-weight: 700; color: var(--mit-red); text-decoration: none; font-size: 0.9rem; }
 
-.card-content p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.card-link {
-    margin-top: auto; /* Pushes link to the bottom of the card */
+/* The Green Section Tag Badge */
+.section-tag {
+    display: inline-block;
+    background-color: var(--geo-green);
+    color: white;
+    font-size: 0.75rem;
     font-weight: 700;
-    color: var(--mit-red);
-    text-decoration: none;
-    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    width: fit-content; 
 }
 
-/* --- Process Page Specific Cards --- */
-
-/* Container for the column */
-/* --- Process Page Specific Card Styles --- */
-
-/* The Card itself (Floating inside the image area) */
-/* --- Process Page Specific Card Styles (UPDATED SIZE) --- */
-
-/* The Card itself */
+/* --- PROCESS PAGE SPECIFIC --- */
 .process-file-card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 550px; /* INCREASED from 360px to 550px */
-    height: 450px;    /* INCREASED from 300px to 450px */
+    max-width: 550px; 
+    height: 450px; 
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -304,17 +250,12 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eee;
     overflow: hidden;
-    margin: 0 auto; /* Keeps it centered in its half of the screen */
+    margin: 0 auto;
 }
+.process-file-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
 
-.process-file-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Stronger shadow for big card */
-}
-
-/* Card Image Area */
 .process-card-thumb {
-    flex: 1.5; /* Takes up 60% of the card height */
+    flex: 1.5; 
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid #f0f0f0;
@@ -322,97 +263,20 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var
     align-items: center;
     justify-content: center;
 }
+.process-card-info { flex: 1; padding: 25px 30px; display: flex; flex-direction: column; justify-content: center; }
+.process-card-label { font-size: 0.8rem; color: #999; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 8px; }
+.process-card-name { font-size: 1.4rem; font-weight: 800; color: #333; line-height: 1.2; margin-bottom: 10px; }
+.process-card-link { font-size: 0.9rem; color: var(--geo-green); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
-/* Card Text Area */
-.process-card-info {
-    flex: 1; /* Takes up 40% of the card height */
-    padding: 25px 30px; /* More padding for a spacious look */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.process-card-label {
-    font-size: 0.8rem; /* Slightly bigger */
-    color: #999;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-}
-
-.process-card-name {
-    font-size: 1.4rem; /* Bigger title */
-    font-weight: 800;
-    color: #333;
-    line-height: 1.2;
-    margin-bottom: 10px;
-}
-
-.process-card-link {
-    font-size: 0.9rem;
-    color: var(--geo-green);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Progress indicator for the curriculum flow */
-.curriculum-flow {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    background: white;
-}
-
-.flow-step {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #ccc;
-    text-transform: uppercase;
-}
-
-.flow-step.active {
-    color: var(--geo-green);
-    border-bottom: 2px solid var(--geo-green);
-}
-
-/* Updated smaller button class */
-.btn-small {
-    padding: 12px 28px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    border-radius: 50px;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-/* 1. Ensure the row is a flex container */
-.sunpower-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px; /* Space between text and card */
-    padding: 40px 0;
-}
-
-/* 2. THE FLIP COMMAND: This reverses the order (Text Left / Card Right) */
-.sunpower-row.flip-layout {
-    flex-direction: row-reverse; 
-}
-
-/* --- MANUAL LAYOUT OVERRIDES --- */
-/* Paste this at the bottom of style.css */
-
-/* Forces the row to flip (Text Left / Card Right) */
-.sunpower-row.flip-layout {
-    flex-direction: row-reverse !important;
-}
-
-/* Forces the row to stay standard (Card Left / Text Right) */
-/* We need this to stop the "even" rows from flipping automatically if we don't want them to */
-.sunpower-row.standard-layout {
-    flex-direction: row !important;
+/* --- MOBILE & RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+    .sunpower-row, 
+    .sunpower-row.flip-layout {
+        flex-direction: column-reverse !important;
+        text-align: center;
+        gap: 40px;
+    }
+    .row-image, .row-text { width: 100%; }
+    .process-file-card { height: auto; min-height: 400px; }
+    .nav-links { display: none; } /* Basic hiding for mobile */
 }
